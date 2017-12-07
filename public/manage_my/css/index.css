@@ -1,9 +1,104 @@
-.manage-left{
-
+html,
+body {
+    height: 100%;
 }
-.manage-left .ll-head{
 
+.manage-left {
+    float: left;
+    width: 180px;
+    height: 100%;
 }
-.manage-left .ll-head a{
-    
-    }
+
+.manage-left .l-head {
+    width: 100%;
+    height: 50px;
+    background-color: #367fa9;
+    text-align: center;
+}
+
+.manage-left .l-head a {
+    display: block;
+    font-size: 20px;
+    line-height: 50px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.manage-left .user {
+    /* height: 100%; */
+    width: 100%;
+    padding: 30px 20px;
+    background-color: #222d32;
+}
+
+.manage-left .user a {
+    display: block;
+    text-align: center;
+}
+
+.manage-left .user a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.manage-left .user a span {
+    font-size: 14px;
+    line-height: 50px;
+    color: #fff;
+}
+
+.manage-left .l-main {
+    height: 100%;
+    width: 100%;
+    background-color: #222d32;
+}
+
+.manage-left .l-main li {
+    border: 4px solid transparent;
+}
+
+.manage-left .l-main li a {
+    padding-left: 30px;
+    font-size: 14px;
+    line-height: 40px;
+    color: gray;
+}
+
+.manage-left .l-main li.active {
+    background-color: black;
+    border-left-color: yellowgreen;
+}
+
+.manage-left .l-main li.active a {
+    color: #fff;
+}
+
+.manage-left .l-main li ol a {
+    line-height: 30px;
+    font-size: 12px;
+    padding-left: 40px;
+}
+.manage-right{
+    width: 100%;
+    height: 100%;
+    padding-left: 180px;
+}
+.manage-right .r-head{
+    background-color: #3c8dbc;
+    height: 50px;
+    padding: 0 20px;
+}
+.manage-right .r-head a{
+    line-height: 50px;
+    font-size: 20px;
+    color:#fff;
+}
+.r-body{
+    padding: 20px 10px;
+}
+.r-body .breadcrumb li:first-child a{
+    /* line-height: 50px; */
+    color:#337ab7;
+    /* font-size:18px; */
+}

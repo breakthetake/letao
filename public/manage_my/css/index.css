@@ -2,6 +2,9 @@ html,
 body {
     height: 100%;
 }
+a:hover{
+    text-decoration: none;
+}
 
 .manage-left {
     float: left;
@@ -83,6 +86,9 @@ body {
     width: 100%;
     height: 100%;
     padding-left: 180px;
+}
+.manage-right.fullScreen{
+    padding-left: 0px;
 }
 .manage-right .r-head{
     background-color: #3c8dbc;

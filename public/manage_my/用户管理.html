@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/用户管理.css">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
         </div>
         <div class="l-main">
             <ul>
-                <li class="">
+                <li class="active">
                     <a href="./用户管理.html">
                         <i class="glyphicon glyphicon-user"></i>用户管理
                     </a>
@@ -53,8 +53,7 @@
     <div class="manage-right">
         <div class="r-head">
             <a class="glyphicon glyphicon-sunglasses pull-left" href="#"></a>
-            <a class="glyphicon glyphicon-log-out pull-right" 
-            data-toggle="modal" data-target=".bs-example-modal-sm" href="#"></a>
+            <a class="glyphicon glyphicon-log-out pull-right" data-toggle="modal" data-target=".bs-example-modal-sm" href="#"></a>
         </div>
         <div class="r-body">
             <ol class="breadcrumb">
@@ -62,11 +61,31 @@
                     <a href="#" class="">管理系统</a>
                 </li>
                 <li>
-                    <a href="#">首页</a>
+                    <a href="#">用户管理</a>
                 </li>
             </ol>
-            <div id="main_left" class='pull-left' style="width: 600px;height:400px;"></div>
-            <div id="main_right" class='pull-right' style="width: 600px;height:400px; right:0"></div>
+            <table class="table table-bordered text-center table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-center" width="10%">序号</th>
+                        <th class="text-center" width="30%">用户名</th>
+                        <th class="text-center" width="30%">手机号</th>
+                        <th class="text-center" width="20%">状态</th>
+                        <th class="text-center" width="10%">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>
+                            <a data-id="1" data-name="itcast" href="javascript:;" class="btn btn-danger">禁用</a>
+                    </tr>
+                </tbody>
+            </table>
+            <ul id="pagintor"></ul>
         </div>
     </div>
     <div class="modal-sure">
@@ -80,8 +99,9 @@
                         <h4 class="modal-title">温馨提示</h4>
                     </div>
                     <div class="modal-body text-danger">
-                        
-                        <p><i class="glyphicon glyphicon-info-sign"></i>您确定要退出吗？</p>
+
+                        <p>
+                            <i class="glyphicon glyphicon-info-sign"></i>您确定要退出吗？</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -94,10 +114,31 @@
         </div>
         <!-- /.modal -->
     </div>
+    <script type="text/html" id="user">
+        {{each rows}}
+        <tr>
+            <td>{{(page-1)*size+1+$index}}</td>
+            <td>{{$value.username}}</td>
+            <td>{{$value.mobile}}</td>
+            <td>
+                {{if $value.isDelete==1}} 已禁用 {{else}} 正常 {{/if}}
+            </td>
+            <td data-id="{{$value.id}}">
+                {{if $value.isDelete==0}}
+                <button class="btn btn-danger">禁用</button>
+                {{else}}
+                <button class="btn btn-primary">启用</button>
+                {{/if}}
+        </tr>
+
+        {{/each}}
+    </script>
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script  src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
     <script src="./lib/echarts/echarts.min.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/用户管理.js"></script>
 </body>
 
 </html>

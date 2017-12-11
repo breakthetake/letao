@@ -1,4 +1,14 @@
 $(function () {  
+    $.ajax({
+        url: '/employee/checkRootLogin',
+        success: function (backData) {
+            console.log(backData);
+            if (backData.error == 400) {
+                window.location.href = './login.html';
+            }
+        }
+    })
+
     $('.r-head >a').first().click(function () {  
         $('.manage-left').toggle();
         $('.manage-right').toggleClass("fullScreen");

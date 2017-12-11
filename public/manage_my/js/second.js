@@ -34,4 +34,34 @@ $(function () {
     // 默认调用一次
     getData();
 
+    $("#fileupload").fileupload({
+        dataType:"json",
+        //e：事件对象
+        //data：图片上传后的对象，通过e.result.picAddr可以获取上传后的图片地址
+        done:function (e, data) {
+          console.log(data);
+          $('form img').attr('src',data.result.picAddr);
+        }
+      });
+
+    $.ajax({
+        url:'/category/queryTopCategoryPaging',
+        data:{
+            page:1,
+            pageSize:256
+        },
+        success:function (data) {
+            console.log(data);
+            $('.dropdown-menu').html('');
+            $.each(data.rows,function(i,n){
+                console.log(n);
+                var $li = $("<li><a href='javascript:void(0);'>"+n.categoryName+"</a></li>");
+                $('.dropdown-menu').append($li);
+            });
+        }
+    });
+    $('.dropdown-menu').on('click','a',function () {  
+        var clickName=$(this).html();
+        $('.select-value').html(clickName);
+    })
 })

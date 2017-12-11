@@ -136,7 +136,8 @@ a:hover{
 }
 
 .manage-left .l-main li.active >a{
-    /* display: block; */
+    display: block;
+    height: 40px;
     background-color: black;
     border-left-color: yellowgreen;
 }
@@ -175,4 +176,11 @@ a:hover{
     /* line-height: 50px; */
     color:#337ab7;
     /* font-size:18px; */
+}
+/* 遮挡样式 */
+#fileUpload{
+    position: absolute;
+    opacity: 0;
+    width: 82px;
+    height: 34px;
 }

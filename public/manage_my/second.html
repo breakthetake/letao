@@ -70,27 +70,28 @@
             </ol>
             <button data-toggle="modal" data-target=".modal-add" class='btn btn-default mb_30'>添加分类</button>
             <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>序号</th>
-                            <th>一级分类名称</th>
-                            <th>二级分类名称</th>
-                            <th>二级分类logo</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>女神</td>
-                            <td>么么大</td>
-                            <td>
-                                <img src="./images/default.png" alt="">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>一级分类名称</th>
+                        <th>二级分类名称</th>
+                        <th>二级分类logo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>女神</td>
+                        <td>么么大</td>
+                        <td>
+                            <img src="./images/default.png" alt="">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
             <!-- 分页控件 -->
             <ul id='pagintor'></ul>
+
 
         </div>
     </div>
@@ -120,6 +121,56 @@
         </div>
         <!-- /.modal -->
     </div>
+    <!-- 新增modal -->
+    <div class="modal fade modal-add" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">添加分类</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="pull-left">一级分类</label>
+                            <div class="dropdown pull-left">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="true">
+                                    请选择
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#">Action</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="请输入二级分类名称">
+                        </div>
+                        <input id="fileupload" type="file" name="pic1" data-url="/category/addSecondCategoryPic" class="btn btn-default" value="上传图片"
+                            multiple>
+
+                        <a class="btn btn-default" href="#">
+                            <span class="glyphicon glyphicon-picture"></span>上传图片
+                        </a>
+                        <div class="form-group">
+                            <img style="width:100px;height:100px;" src="./images/none.png" alt="">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" form="form" class="btn btn-primary">确认</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
     <script id='second' type="text/html">
         {{each rows}}
         <tr>
@@ -135,10 +186,13 @@
     <script type="text/html" id=""></script>
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-    <script  src="./lib/artTemplate/template.js"></script>
-    <script  src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
-    <script  src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+    <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
     <script src="./lib/echarts/echarts.min.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
+    <script src="./js/base.js"></script>
     <script src="./js/second.js"></script>
 </body>
 

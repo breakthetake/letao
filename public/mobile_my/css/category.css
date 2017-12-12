@@ -1,0 +1,60 @@
+.lt-content{
+    display: flex;
+}
+.lt-content .content_left{
+    width: 90px;
+    position: relative;
+}
+.lt-content .content_left .mui-scroll-wrapper{
+    
+}
+.lt-content .content_left .mui-scroll-wrapper .mui-scroll{
+    
+}
+.lt-content .content_left .mui-scroll-wrapper .mui-scroll li.active a{
+    background-color: #fff;
+    border-right-color: transparent;
+}
+.lt-content .content_left .mui-scroll-wrapper .mui-scroll li a{
+    height: 50px;
+    display: block;
+    line-height: 50px;
+    color: gray;
+    background-color: hotpink;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    text-align: center;
+}
+.content_right {
+    flex: 1;
+    background-color: white;
+    position: relative;
+}
+
+.content_right ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content_right ul li {
+    width: 33.3333%;
+}
+
+.content_right ul li a {
+    width: 100%;
+    display: block;
+}
+
+.content_right ul li a img {
+    display: block;
+    /* width: 100%; */
+    /* height: 80px; */
+    width: 62px;
+    height: 62px;
+    margin: 0 auto;
+}
+
+.content_right ul li a p {
+    text-align: center;
+    color: gray;
+}

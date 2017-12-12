@@ -1,0 +1,56 @@
+.mui-input-group{
+    padding: 10px;
+}
+.mui-input-group .row{
+    margin-bottom: 10px;
+    border: 1px solid #dadadd;
+    border-radius: 5px;
+    position: relative;
+}
+.mui-input-group .row span{
+   color: #ccc;
+   position: absolute;
+   right:0;
+   top: 0;
+   margin-right: 10px;
+   margin-top: 8px;
+}
+.mui-input-group .row:nth-child(5){
+    display: flex;
+    width: 100%;
+}
+.mui-input-group .row:nth-child(5) button{
+    width: 120px;
+    height: 40px;
+    /* margin:0 10px; */
+}
+.mui-input-group .row:nth-child(5) input{
+    flex: 1;
+}
+.mui-button-row{
+    width: 100%;
+    padding: 10px;
+}
+.mui-button-row button{
+    width: 100%;
+    font-size: 18px;
+}
+form.register-form input{
+    border: 1px solid gray;
+}
+
+.form-bottom{
+    font-size:12px;
+    padding: 15px;
+    line-height: 21px;
+    
+}
+.form-bottom input{
+    margin-top: 3px;
+}
+.form-bottom span{
+    color:black;
+}
+.form-bottom a{
+    color:deepskyblue;
+}   

@@ -14,6 +14,9 @@ p{
 ul,ol{
     list-style: none;
 }
+i{
+    font-style: normal;
+}
 
 /* 页面大盒子 */
 .lt_container{
@@ -45,9 +48,10 @@ ul,ol{
 /* 内容 */
 .lt_content{
     /* flex 使用 剩余尺寸 */
-    flex:110;
-    background-color: orange;
+    flex:1;
+    /* background-color: orange; */
     position: relative;
+    overflow: hidden;
 }
 
 /* 底部 */
